@@ -18,12 +18,24 @@ def step_impl(context):
        # context.browser.get(baaqmd_qa_eng)
     #elif (os.environ['location'] == "prod"):
         context.browser.get(baaqmd_prod_main_eng)
+        time.sleep(3)
 
 @when(u'I fill telephone number in phone field')
 def step_impl(context):
     sp.phone_field_click(context)
-    sp.phone_field(context).send_keys("1")
-    sp.phone_field(context).send_keys("1231231234")
+    sp.phone_field_click(context)
+    sp.phone_field(context).send_keys("4154948693")
+    time.sleep(4)
+
+@then(u'I untick Summer checkbox')
+def step_impl(context):
+    sp.summer_checkbox_click(context)
+    time.sleep(2)
+
+@then(u'I tick Test checkbox')
+def step_impl(context):
+    sp.summer_checkbox_click(context)
+    time.sleep(2)
 
 @then(u'I click Submit button')
 def step_impl(context):

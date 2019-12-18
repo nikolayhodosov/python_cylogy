@@ -21,3 +21,11 @@ class Search:
     def submit_message(self, context):
         WebDriverWait(context.browser, 30).until(EC.presence_of_element_located((By.XPATH, "//p[@class='sign-up-notifications__toolbar-description-on-submit'][contains(text(),'Thank you')]")))
         return context.browser.find_element_by_xpath("//p[@class='sign-up-notifications__toolbar-description-on-submit'][contains(text(),'Thank you')]")
+
+    def summer_checkbox_click(self, context):
+        WebDriverWait(context.browser, 30).until(EC.presence_of_element_located((By.XPATH, "//*[@class='check_leftToolBar bernina-condensed-semibold'][contains(text(),'Summer')]")))
+        context.browser.find_element_by_xpath("//*[@class='check_leftToolBar bernina-condensed-semibold'][contains(text(),'Summer')]").click()
+
+    def summer_checkbox_click(self, context):
+        WebDriverWait(context.browser, 30).until(EC.presence_of_element_located((By.XPATH, "//*[@class='check_leftToolBar bernina-condensed-semibold'][contains(text(),'Test')]")))
+        context.browser.find_element_by_xpath("//*[@class='check_leftToolBar bernina-condensed-semibold'][contains(text(),'Test')]").click()
